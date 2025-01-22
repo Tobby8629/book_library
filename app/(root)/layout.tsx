@@ -16,7 +16,7 @@ const Layout = ({children, header}: {children: ReactNode, header: ReactNode}) =>
           <h3 className='ml-3 font-ibm-plex-sans font-semibold'>BookWise</h3>
         </div>
           
-        <ul className='flex gap-5'>
+        {/* <ul className='flex gap-5 items-center'>
           {menu.map((item) => (
             <li key={item.id} >
               <Link className={`${pathname === item.path ? "text-yellow-200" : "text-white"} font-semibold`}
@@ -29,7 +29,7 @@ const Layout = ({children, header}: {children: ReactNode, header: ReactNode}) =>
             <a href="/logout" className='font-semibold'>
               <Image src={logout} alt='logout' width={30} height={30}/>
             </a>
-        </ul> 
+        </ul>  */}
       </nav>
       {children}
     </section>

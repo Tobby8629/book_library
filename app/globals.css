@@ -39,7 +39,7 @@
   }
       
     .wrapper_div {
-      @apply max-w-7xl px-10 mx-auto
+      @apply max-w-7xl px-10 max-xs:px-5 mx-auto
     }
 
 
