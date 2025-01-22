@@ -13,6 +13,10 @@ export default {
         "ibm-plex-sans": ["IBM Plex Sans", "sans-serif"],
         "bebas-neue": ["var(--bebas-neue)"],
       },
+      lineHeight: {
+        textHeader_md: "5rem",
+        textHeader_sm: "3.5rem",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

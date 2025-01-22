@@ -1,5 +1,6 @@
 import book_two from './book-2.svg';
 import  book  from './book.svg';
+import  book_black  from './book_black.svg';
 import calendar  from './calendar.svg';
 import clock from './clock.svg';
 import heart from './heart.svg';
@@ -20,6 +21,7 @@ import warning from './warning.svg';
 export {
  book_two,
   book,
+  book_black,
   calendar,
   clock,
   heart,

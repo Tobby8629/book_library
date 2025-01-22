@@ -42,5 +42,21 @@
       @apply max-w-7xl px-10 max-xs:px-5 mx-auto
     }
 
+    .text_header {
+      @apply font-semibold text-7xl font-ibm-plex-sans max-sm:text-5xl leading-textHeader_md max-sm:leading-textHeader_sm ;
+    } 
+
+    .text {
+      @apply font-ibm-plex-sans font-normal md:text-xl text-light-100
+    }
+
+    .gold_text {
+      @apply text-light-200 font-semibold md:text-xl
+    }
+
+  
+
+  
+
 
   }
