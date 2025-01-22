@@ -43,20 +43,21 @@
     }
 
     .text_header {
-      @apply font-semibold text-7xl font-ibm-plex-sans max-sm:text-5xl leading-textHeader_md max-sm:leading-textHeader_sm ;
+      @apply font-semibold max-sm:text-3xl xl:text-6xl font-ibm-plex-sans text-5xl leading-textHeader_md max-sm:leading-textHeader_sm ;
     } 
 
     .text {
-      @apply font-ibm-plex-sans font-normal md:text-xl text-light-100
+      @apply font-ibm-plex-sans font-normal max-sm:text-[17px] max-sm:leading-[27px] text-2xl md:leading-10 text-light-100
     }
 
     .gold_text {
-      @apply text-light-200 font-semibold md:text-xl
+      @apply text-light-200 font-semibold max-sm:text-[17px] max-sm:leading-[27px] md:text-2xl
     }
-
-  
-
   
 
 
+  }
+
+  .blurred-image {
+    filter: blur(3px);  
   }
