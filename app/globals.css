@@ -63,7 +63,7 @@
     }
 
     .small {
-      @apply w-full max-sm:w-24 max-sm:h-[150px] h-[200px] 
+      @apply w-full max-sm:w-24 max-sm:h-[150px] h-[199px] 
     }
 
 

@@ -7,7 +7,7 @@ interface bookList{
 
 const BookList = ({book}: bookList) => {
   return (
-    <div className="flex flex-col w-[146px] max-sm:w-[30.5%] min-h-56">
+    <div className="eachBook -translate-x-3 opacity-0 flex flex-col w-[146px] max-sm:w-[30.5%] min-h-56">
       <BookCover variant="small" image={book.cover} coverColor={book.color}/>
       <h2 className="py-1  max-sm:text-xs font-ibm-plex-sans font-semibold ">
          {maxText(`${book.title}- By ${book.author}`, 27)}
