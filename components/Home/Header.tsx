@@ -41,11 +41,11 @@ const Header = ({book}: book) => {
 
        <section className='relative flex justify-center -translate-x-[15%] lg:translate-x-0 '> 
         <div className='z-10'>
-          <BookCover coverColor={book.color} image={book.cover}/>
+          <BookCover variant='regular' coverColor={book.color} image={book.cover}/>
         </div>
         
         <div className=' blurred-image absolute lg:h-full lg:w-full top-[15%] left-[50%] lg:top-[10%] lg:left-[40%] rotate-3'>
-          <BookCover coverColor={book.color} image={book.cover} />
+          <BookCover variant='regular' coverColor={book.color} image={book.cover} />
         </div>
       
        </section>

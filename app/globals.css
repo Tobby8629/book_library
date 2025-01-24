@@ -44,7 +44,11 @@
 
     .text_header {
       @apply font-semibold max-sm:text-3xl xl:text-6xl font-ibm-plex-sans text-5xl leading-textHeader_md max-sm:leading-textHeader_sm ;
-    } 
+    }
+    
+    .sub_textHeader {
+      @apply font-semibold text-3xl my-8 max-sm:text-2xl
+    }
 
     .text {
       @apply font-ibm-plex-sans font-normal max-sm:text-[17px] max-sm:leading-[27px] text-2xl md:leading-10 text-light-100
@@ -54,6 +58,13 @@
       @apply text-light-200 font-semibold max-sm:text-[17px] max-sm:leading-[27px] md:text-2xl
     }
   
+    .regular {
+      @apply max-sm:max-w-[150px] md:max-w-[170px] lg:max-w-[210px] xl:max-w-[277px]
+    }
+
+    .small {
+      @apply w-full max-sm:w-24 max-sm:h-[150px] h-[200px] 
+    }
 
 
   }

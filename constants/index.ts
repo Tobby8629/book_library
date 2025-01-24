@@ -133,3 +133,14 @@ export const sampleBooks = [
         "Morgan Housel explores the unique behaviors and mindsets that shape financial success and decision-making.",
         },
 ]
+
+export const maxText = (title:string, length: number) => {
+    if(title.length <= length){
+      return title
+    }
+    else {
+      let remain = title.slice(0, length + 1)
+      return (`${remain}...`)
+    }
+    
+}
