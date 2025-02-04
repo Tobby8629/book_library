@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 interface bookObject {
     id: number,
     title:string,
@@ -11,4 +13,17 @@ interface bookObject {
     cover:string,
     video: string,
     summary:string 
+}
+
+interface authLayout {
+  children: ReactNode
+}
+
+
+type formType = "signup" | "signin"
+
+interface formProps {
+  type: formType
+  header: string
+  subheader: string
 }

@@ -31,7 +31,7 @@
 
   @layer components {
     .main_section {
-      background: linear-gradient(rgba(17, 22, 36, 0) 10%, rgb(7, 10, 18)), url('../public/images/pattern.webp');
+      background: linear-gradient(rgba(17, 22, 36, 0) 10%, rgb(16, 30, 67)), url('../public/images/pattern.webp');
       background-repeat: no-repeat;
       background-size: cover;
       min-height: 100vh;
