@@ -1,4 +1,8 @@
+import { DefaultValues } from './node_modules/react-hook-form/dist/types/form.d';
 import { ReactNode } from "react"
+import { FieldValues } from 'react-hook-form';
+import { ZodType } from "zod"
+
 
 interface bookObject {
     id: number,
@@ -22,8 +26,10 @@ interface authLayout {
 
 type formType = "signup" | "signin"
 
-interface formProps {
-  type: formType
-  header: string
-  subheader: string
+interface FormProps<T extends FieldValues> {
+  type: FormType;  // Ensure FormType is properly defined
+  header: string;
+  subheader: string;
+  schema: ZodType<T>;
+  defaultValues: T; // Should be lowercase "d" to match JavaScript/TypeScript conventions
 }
