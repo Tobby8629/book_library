@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ReactNode } from "react";
+import ImageKitProviderWrapper from "./ImageKitProvider";
+import { config } from "@/lib/config";
 
 const ibmPlexSans = localFont({
   src: [
@@ -19,6 +21,7 @@ const bebasNeue = localFont({
   variable: "--bebas-neue",
 });
 
+
 export const metadata: Metadata = {
   title: "Books Library",
   description: "The best books library",
@@ -27,12 +30,15 @@ export const metadata: Metadata = {
 const RootLayout = ({children}:{children: ReactNode}) => {
   return (
     <html lang="en">
-      <body
-        className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`} 
-      >
-        {children}
-      </body>
+    
+        <body
+          className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`} 
+        >
+          <ImageKitProviderWrapper children={children} />
+        </body>
+      
     </html>
+    
   );
 }
 

@@ -5,6 +5,7 @@ import { sampleBooks } from "@/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IKImage } from "imagekitio-next";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +37,7 @@ const Home = () => {
       },
     })
   },[])
+
   return (
     <>
       <Header book={sample}/>
@@ -46,7 +48,10 @@ const Home = () => {
             <BookList key={book.id} book={book}/>
           ))}
         </div>
-        
+        {/* <div className="App">
+          <h1>ImageKit Next.js quick start</h1>
+          <IKImage lqip={{ active: true }} loading="lazy" path="default-image.jpg" width={400} height={400} alt="Alt text" />
+        </div> */}
       </section>
     </>
   );

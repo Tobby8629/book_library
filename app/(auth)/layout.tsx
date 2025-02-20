@@ -20,7 +20,6 @@ const layout = ({children}: authLayout) => {
         {children}
        </div>
       </main>
-      
     </section>
   )
 }
