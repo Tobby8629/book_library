@@ -13,7 +13,7 @@ const page = () => {
       fullName: "",
       email: "",
       password: "",
-      confirmPassword: "",
+      // confirmPassword: "",
       universityId: 0,
       universityCard: "",
      }}

@@ -9,6 +9,8 @@ import { Input } from '../ui/input'
 import { eye } from '@/public/icons/admin'
 import Image from 'next/image'
 import Button from '../reuseable/Button'
+import ImageUpload from './ImageUpload'
+import { fieldName, fieldType, placeHolder } from '@/constants'
 
 const AuthForm = <T extends FieldValues>({
   type,
@@ -31,14 +33,17 @@ const AuthForm = <T extends FieldValues>({
         {Object.keys(defaultValues).map((obj) => (
           <FormField 
             control={form.control}
+            key={obj}
             name={obj as Path<T>}
             render={({field})=>(
-              <FormItem className='my-5'>
-                <FormLabel className='mb-0 capitalize'>{field.name}</FormLabel>
+              <FormItem className='my-3'>
+                <FormLabel className='mb-0 font-normal text-base font-ibm-plex-sans'>{fieldName[field.name]}</FormLabel>
                 <FormControl>
-                  <div className='bg-[#232839] !mt-1 flex items-center p-2 rounded-lg'>
-                  <Input className='border-none placeholder:capitalize' placeholder={field.name} type={field.name === "password" ? "password" : "text"} />
-                  {field.name === "password" && <Image src={eye} alt="eye" width={20} height={20}/>}
+                  <div className='bg-[#232839] !mt-1 flex items-center p-2 py-1 pr-3 rounded-lg h-[50px]'>
+                  {fieldType[field.name]  === "file" ? <ImageUpload /> :
+                  <Input className='border-none ! px-0 !h-full placeholder:text-[#D6E0FF66]' placeholder={placeHolder[field.name]} type={field.name === "password" ? "password" : "text"} />
+                  }
+                  {field.name === "password" && <Image src={eye} alt="eye" width={20} height={20} />}
                   </div>
                   
                 </FormControl>
@@ -47,10 +52,13 @@ const AuthForm = <T extends FieldValues>({
           >
           </FormField>
         ))}
-         <Button text="Submit"  />
+        <div className='mt-4'>
+          <Button text="Submit" className='h-[50px] flex items-center justify-center' /> 
+        </div>
+        
       </Form>
       
-      <p className='my-5'>
+      <p className='mt-5'>
       {type === "signin" ? (
         <>
           Don’t have an account? <Link href="/signup" className="text-primary font-bold">Register</Link>

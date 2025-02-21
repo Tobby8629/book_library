@@ -1,4 +1,5 @@
 import { config } from "@/lib/config"
+import { University } from "lucide-react"
 
 export const sampleBooks = [
     {
@@ -162,3 +163,30 @@ export const authenticator = async () => {
       throw new Error(`Authentication request failed: ${error.message}`);
     }
 };
+
+export const fieldType: Record<string, "email" | "password" | "text" | "number" | "file"> = {
+  email: "email",
+  password: "password",
+  confirmPassword: "password",
+  fullName: "text",
+  UniversityId: "number",
+  universityCard: "file",
+};
+  
+export const fieldName : Record<string, "Full name" | "Email" | "Password" | "Confirm password" | "University ID Number" |  "University Card"> = {
+  fullName: "Full name",
+  email: "Email",
+  password: "Password",
+  confirmPassword: "Confirm password",
+  universityId: "University ID Number",
+  universityCard: "University Card",
+}
+
+export const placeHolder: Record <string,  " Enter full Name" | "Enter email address" | "Atleast 8 characters" | "eg: 394365762"  | "University Card"> = {
+  fullName: " Enter full Name",
+  email:"Enter email address",
+  password: "Atleast 8 characters",
+  confirmPassword: "Atleast 8 characters",
+  universityId: "eg: 394365762",
+  universityCard: "University Card",
+}
