@@ -39,4 +39,5 @@ interface uploadKit {
   onChange: (file: string) => void;
   accept: string;
   folder: string;
+  id: string
 }

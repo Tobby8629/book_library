@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRef, useState } from 'react'
 
 
-const ImageUpload = ({type,onChange}: uploadKit) => {
+const ImageUpload = ({type,onChange, id}: uploadKit) => {
   const clickFile = useRef<HTMLInputElement | null>(null)
   const handleClick = () => {
     if(clickFile.current){clickFile.current?.click()}
@@ -23,6 +23,7 @@ const ImageUpload = ({type,onChange}: uploadKit) => {
     <>
       <IKUpload ref={clickFile} 
       onError={onError} 
+      id={id}
       onSuccess={onSuccess} 
       className=' hidden'
       useUniqueFileName={true}

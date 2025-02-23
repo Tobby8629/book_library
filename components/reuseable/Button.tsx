@@ -7,9 +7,9 @@ interface button {
  type?: "button" | "submit" | "reset"
 }
 
-const Button = ({text, action, className}: button) => {
+const Button = ({text,type, action, className}: button) => {
   return (
-   <button className={`w-full text-center rounded-lg text-dark-100 h-14 leading-[60px] bg-light-200 ${className}`} onClick={action}>
+   <button type={type} className={`w-full text-center rounded-lg text-dark-100 h-14 leading-[60px] bg-light-200 ${className}`} onClick={action}>
      {text}
    </button>
   )

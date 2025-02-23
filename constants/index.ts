@@ -169,7 +169,7 @@ export const fieldType: Record<string, "email" | "password" | "text" | "number" 
   password: "password",
   confirmPassword: "password",
   fullName: "text",
-  UniversityId: "number",
+  universityId: "number",
   universityCard: "file",
 };
   
