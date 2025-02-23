@@ -33,3 +33,10 @@ interface FormProps<T extends FieldValues> {
   schema: ZodType<T>;
   defaultValues: T; // Should be lowercase "d" to match JavaScript/TypeScript conventions
 }
+
+interface uploadKit {
+  type: "image" | "video";
+  onChange: (file: string) => void;
+  accept: string;
+  folder: string;
+}

@@ -4,6 +4,7 @@ interface button {
  text: string | ReactNode,
  action? : () => void,
  className?: string
+ type?: "button" | "submit" | "reset"
 }
 
 const Button = ({text, action, className}: button) => {

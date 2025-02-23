@@ -30,32 +30,35 @@ const AuthForm = <T extends FieldValues>({
       <h3 className='sub_textHeader !text-xl !my-3'>{header}</h3>
       <p className='text !text-sm xl:!text-base'>{subheader}</p>
       <Form {...form}>
-        {Object.keys(defaultValues).map((obj) => (
-          <FormField 
-            control={form.control}
-            key={obj}
-            name={obj as Path<T>}
-            render={({field})=>(
-              <FormItem className='my-3'>
-                <FormLabel className='mb-0 font-normal text-base font-ibm-plex-sans'>{fieldName[field.name]}</FormLabel>
-                <FormControl>
-                  <div className='bg-[#232839] !mt-1 flex items-center p-2 py-1 pr-3 rounded-lg h-[50px]'>
-                  {fieldType[field.name]  === "file" ? <ImageUpload /> :
-                  <Input className='border-none ! px-0 !h-full placeholder:text-[#D6E0FF66]' placeholder={placeHolder[field.name]} type={field.name === "password" ? "password" : "text"} />
+        <form onSubmit={form.handleSubmit((data) => console.log(data, "trying"))}>
+          {Object.keys(defaultValues).map((obj) => (
+            <FormField 
+              control={form.control}
+              key={obj}
+              name={obj as Path<T>}
+              render={({field})=>(
+                <FormItem className='my-3'>
+                  <FormLabel className='mb-0 font-normal text-base font-ibm-plex-sans'>{fieldName[field.name]}</FormLabel>
+                  <FormControl>
+                  {
+                    fieldType[field.name]  === "file" ? <ImageUpload onChange={field.onChange} type="image" folder='id' accept='image'  /> :
+                    <div className='input'>
+                    <Input className='border-none ! px-0 !h-full placeholder:text-[#D6E0FF66]' placeholder={placeHolder[field.name]} type={field.name === "password" ? "password" : "text"} />
+                    {field.name === "password" && <Image src={eye} alt="eye" width={20} height={20} />}
+                    </div>
                   }
-                  {field.name === "password" && <Image src={eye} alt="eye" width={20} height={20} />}
-                  </div>
-                  
-                </FormControl>
-              </FormItem>
-            )}
-          >
-          </FormField>
-        ))}
+                    
+                  </FormControl>
+                </FormItem>
+              )}
+            >
+            </FormField>
+          ))}
+          
         <div className='mt-4'>
-          <Button text="Submit" className='h-[50px] flex items-center justify-center' /> 
+          <Button type="submit" text="Submit" className='h-[50px] flex items-center justify-center' /> 
         </div>
-        
+        </form>
       </Form>
       
       <p className='mt-5'>

@@ -6,7 +6,7 @@ import React, { ReactNode } from 'react'
 
 const ImageKitProviderWrapper = ({children}:{children: ReactNode}) => {
   return (
-    <ImageKitProvider publicKey={config.imageKit.publickey} authenticator={authenticator} urlEndpoint={config.imageKit.urlEndpoint}>
+    <ImageKitProvider publicKey={config.imageKit.publicKey} authenticator={authenticator} urlEndpoint={config.imageKit.urlEndpoint}>
       {children}
     </ImageKitProvider>
   )
